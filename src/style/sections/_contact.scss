@@ -8,7 +8,7 @@
   color: $white-color;
 
   @include respond(tab-land) {
-    padding: 10rem 0;
+    padding: 2rem 0 5rem;
     clip-path: none;
     margin-top: 0;
     -webkit-clip-path: none;
