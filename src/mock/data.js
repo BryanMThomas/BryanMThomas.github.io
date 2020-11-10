@@ -17,9 +17,9 @@ export const heroData = {
 export const aboutData = {
   img: 'profile.jpg',
   paragraphOne:
-    'I started my career in test automation as a Software Development Engineer in Test. Today I am expanding my knowledge of software development in industy.',
+    'I started my career in quality engineering and test automation as a Software Development Engineer in Test. Today I am working towards expanding my knowledge of software development in industy.',
   paragraphTwo:
-    'My passions are full stack web development and building out tools/processes that assist with the development lifecycle.',
+    'My passions are full stack web development and building out tools/processes that assist with continous integration and the development lifecycle.',
   paragraphThree:
     'I am currently deveopling my skills in React JS, .NET Core, and the AWS Public Cloud',
   resume: pdf,
