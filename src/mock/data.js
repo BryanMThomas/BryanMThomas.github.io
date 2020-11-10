@@ -61,6 +61,18 @@ export const contactData = {
   btn: 'Shoot Me An Email!',
   email: 'thomas.bryan.m@gmail.com',
   subtext: 'Or check me out on Github or LinkedIn',
+  networks: [
+    {
+      id: nanoid(),
+      name: 'linkedin',
+      url: 'https://www.linkedin.com/in/bryan-m-thomas/',
+    },
+    {
+      id: nanoid(),
+      name: 'github',
+      url: 'https://github.com/BryanMThomas',
+    },
+  ],
 };
 
 // FOOTER DATA

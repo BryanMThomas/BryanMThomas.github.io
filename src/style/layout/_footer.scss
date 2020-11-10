@@ -1,7 +1,7 @@
 .footer {
   background-color: $dark-grey;
   color: $white-color;
-  padding: 4.8rem 0;
+  padding: 2rem 0;
 
   @include respond(phone) {
     border: 0px;
@@ -46,9 +46,9 @@
     flex-direction: column;
     justify-content: center;
     color: $white-color;
-    font-size: 3rem;
-    width: 5rem;
-    height: 5rem;
+    font-size: 10rem;
+    width: 10rem;
+    height: 2rem;
     margin: $default-font-size $default-font-size;
     transition: all 0.2s ease-in;
 
