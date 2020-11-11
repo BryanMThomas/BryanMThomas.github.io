@@ -29,30 +29,22 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    img: 'VR_Airspace_Project.png',
+    title: 'VR Airspace Control Tower',
+    info:
+      'VR team project completed in conjunction with General Dynamics to establish remote airspace in Virtual Reality. Created the ability to remotely control an airspace with access to realtime data including flight patterns, aircraft location, radio transmissiond, and view of the tarmac.',
+    info2: 'AWS EC2 Instances, Swagger API, Node JS, Unity / C#',
+    url:
+      'https://demo-portfolio-vids-gifs.s3-us-west-2.amazonaws.com/VR_Airspace_Project/VR_Airspace_Project.mp4',
+    repo: 'https://github.com/BryanMThomas/VR_AirSpace_Project',
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    img: 'Burger_Builder_Project.png',
+    title: 'Burger Builder',
+    info: 'Introductory project used to learn about React and managing state.',
+    info2: 'React JS',
+    repo: 'https://github.com/BryanMThomas/burger-builder',
   },
 ];
 
