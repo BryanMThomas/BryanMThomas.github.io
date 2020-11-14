@@ -13,6 +13,16 @@ const Footer = () => {
         </span>
         <hr />
         <p className="footer__text">Built by Bryan Thomas</p>
+        <p className="footer__text">
+          Source code for this portfolio can be found on my{' '}
+          <a
+            href="https://github.com/BryanMThomas/BryanMThomas.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.io repo
+          </a>
+        </p>
       </Container>
     </footer>
   );

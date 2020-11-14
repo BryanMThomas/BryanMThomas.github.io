@@ -9,18 +9,18 @@
 
   &__text {
     color: darken(white, 50%);
-    font-size: 1.3rem;
+    font-size: 2rem;
 
     a {
-      color: darken(white, 50%);
-      font-size: 1.3rem;
+      color: $primary-color;
+      font-size: 2rem;
       transition: all 0.4s;
       display: inline-block;
       background-color: $dark-grey;
 
       &:hover,
       &:active {
-        color: $primary-color;
+        color: lighten($primary-color,30%);
         -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
       }

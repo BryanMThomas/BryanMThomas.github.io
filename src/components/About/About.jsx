@@ -56,6 +56,30 @@ const About = () => {
             </Fade>
           </Col>
         </Row>
+        <div className="skills-wrapper">
+          <Row>
+            <div className="skills">
+              <h1>Skills</h1>
+            </div>
+          </Row>
+          <Row>
+            <div className="skills">
+              <p>
+                <strong>Software Development:</strong> Agile Development, Software Design, Data
+                Structures, Quality Assurance, Continuous Integration, Service Oriented
+                Architecture, MicroServices/Serverless Frameworks
+              </p>
+            </div>
+          </Row>
+          <Row>
+            <div className="skills">
+              <p>
+                <strong>Technologies:</strong> C#/C++/C, Java, JavaScript, Selenium, .NET , Jenkins,
+                AWS, Kibana, Jira, Confluence
+              </p>
+            </div>
+          </Row>
+        </div>
       </Container>
     </section>
   );
