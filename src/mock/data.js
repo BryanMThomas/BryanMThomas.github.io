@@ -29,6 +29,16 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
+    img: 'bryx_Project.png',
+    title: 'bryx Real Estate Site',
+    info: 'Introductory project used to learn about developing a web app using AWS and React JS.',
+    info2:
+      'AWS Lambda, Dynamo DB, S3 Buckets, Amplify, React JS, useState Hook, React Bootstrap, React Router',
+    url: 'https://main.d3svg2y1msp5x4.amplifyapp.com/',
+    repo: 'https://github.com/BryanMThomas/bryx-project',
+  },
+  {
+    id: nanoid(),
     img: 'VR_Airspace_Project.png',
     title: 'VR Airspace Control Tower',
     info:
@@ -37,14 +47,6 @@ export const projectsData = [
     url:
       'https://demo-portfolio-vids-gifs.s3-us-west-2.amazonaws.com/VR_Airspace_Project/VR_Airspace_Project.mp4',
     repo: 'https://github.com/BryanMThomas/VR_AirSpace_Project',
-  },
-  {
-    id: nanoid(),
-    img: 'Burger_Builder_Project.png',
-    title: 'Burger Builder',
-    info: 'Introductory project used to learn about React and managing state.',
-    info2: 'React JS',
-    repo: 'https://github.com/BryanMThomas/burger-builder',
   },
 ];
 
