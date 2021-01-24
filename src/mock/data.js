@@ -1,5 +1,6 @@
 import { nanoid } from 'nanoid';
 import pdf from '../images/resume/Bryan_Thomas_Resume.pdf';
+import pawesomeGif from '../images/pawesome-demo.gif';
 
 // HEAD DATA
 export const headData = {
@@ -47,6 +48,17 @@ export const projectsData = [
     url:
       'https://demo-portfolio-vids-gifs.s3-us-west-2.amazonaws.com/VR_Airspace_Project/VR_Airspace_Project.mp4',
     repo: 'https://github.com/BryanMThomas/VR_AirSpace_Project',
+  },
+  {
+    id: nanoid(),
+    img: 'pawesome.png',
+    title: 'Pawesome Dog Adoption Matching',
+    info:
+      'Introductory project used to learn expand knowledge of React JS and state hooks abilities.',
+    info2:
+      'React JS, AWS Lambda, Dynamo DB, S3 Buckets, useState Hook, useEffect Hook, React Router',
+    url: pawesomeGif,
+    repo: 'https://github.com/BryanMThomas/pawesome',
   },
 ];
 
