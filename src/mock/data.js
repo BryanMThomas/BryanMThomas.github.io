@@ -53,8 +53,7 @@ export const projectsData = [
     id: nanoid(),
     img: 'pawesome.png',
     title: 'Pawesome Dog Adoption Matching',
-    info:
-      'Introductory project used to learn expand knowledge of React JS and state hooks abilities.',
+    info: 'Learning project used to expand knowledge of React JS and state hooks abilities.',
     info2:
       'React JS, AWS Lambda, Dynamo DB, S3 Buckets, useState Hook, useEffect Hook, React Router',
     url: pawesomeGif,
