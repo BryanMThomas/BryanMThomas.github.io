@@ -65,6 +65,13 @@ const About = () => {
           <Row>
             <div className="skills">
               <p>
+                <strong>Languages:</strong> C#, JavaScript, TypeScript, Java, C/C++
+              </p>
+            </div>
+          </Row>
+          <Row>
+            <div className="skills">
+              <p>
                 <strong>Software Development:</strong> Agile Development, Software Design, Data
                 Structures, Quality Assurance, Continuous Integration, Service Oriented
                 Architecture, MicroServices/Serverless Frameworks
@@ -74,8 +81,8 @@ const About = () => {
           <Row>
             <div className="skills">
               <p>
-                <strong>Technologies:</strong> C#/C++/C, Java, JavaScript, Selenium, .NET , Jenkins,
-                AWS, Kibana, Jira, Confluence
+                <strong>Technologies:</strong> React, .NET, Node, Selenium, Jenkins, Amazon Web
+                Services (AWS), Docker, Kibana, Jira
               </p>
             </div>
           </Row>

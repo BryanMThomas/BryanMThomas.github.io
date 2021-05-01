@@ -18,7 +18,7 @@ export const heroData = {
 export const aboutData = {
   img: 'profile.jpg',
   paragraphOne:
-    'I started my career in quality engineering and test automation as a Software Development Engineer in Test. Today I am working towards expanding my knowledge of software development in industy.',
+    'I started my career in quality engineering and test automation as a Software Development Engineer in Test. Today I am working towards expanding my knowledge of software development in relation to web development and DevOps in industy.',
   paragraphTwo:
     'My passions are full stack web development and building out tools/processes that assist with continous integration and the development lifecycle.',
   paragraphThree:
@@ -30,13 +30,15 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'bryx_Project.png',
-    title: 'bryx Real Estate Site',
-    info: 'Introductory project used to learn about developing a web app using AWS and React JS.',
+    img: 'ttp_Project.png',
+    title: 'Painting Estimate Web App',
+    info:
+      'Built to allow painting company to provide more consistent estimates and save historical data.',
     info2:
       'AWS Lambda, Dynamo DB, S3 Buckets, Amplify, React JS, useState Hook, React Bootstrap, React Router',
-    url: 'https://main.d3svg2y1msp5x4.amplifyapp.com/',
-    repo: 'https://github.com/BryanMThomas/bryx-project',
+    url:
+      'https://demo-portfolio-vids-gifs.s3-us-west-2.amazonaws.com/PaintingEstimateApp/paintingEstimateApp.mp4',
+    repo: 'https://github.com/BryanMThomas/ToddThomasPaintingApp',
   },
   {
     id: nanoid(),
@@ -48,6 +50,16 @@ export const projectsData = [
     url:
       'https://demo-portfolio-vids-gifs.s3-us-west-2.amazonaws.com/VR_Airspace_Project/VR_Airspace_Project.mp4',
     repo: 'https://github.com/BryanMThomas/VR_AirSpace_Project',
+  },
+  {
+    id: nanoid(),
+    img: 'bryx_Project.png',
+    title: 'bryx Real Estate Site',
+    info: 'Introductory project used to learn about developing a web app using AWS and React JS.',
+    info2:
+      'AWS Lambda, Dynamo DB, S3 Buckets, Amplify, React JS, useState Hook, React Bootstrap, React Router',
+    url: 'https://main.d3svg2y1msp5x4.amplifyapp.com/',
+    repo: 'https://github.com/BryanMThomas/bryx-project',
   },
   {
     id: nanoid(),
