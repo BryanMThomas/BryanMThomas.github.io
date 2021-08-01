@@ -1,5 +1,4 @@
 import { nanoid } from 'nanoid';
-import pdf from '../images/resume/Bryan_Thomas_Resume.pdf';
 import pawesomeGif from '../images/pawesome-demo.gif';
 
 // HEAD DATA
@@ -23,7 +22,6 @@ export const aboutData = {
     'My passions are full stack web development and building out tools/processes that assist with continous integration and the development lifecycle.',
   paragraphThree:
     'I am currently deveopling my skills in React JS, .NET Core, and the AWS Public Cloud',
-  resume: pdf,
 };
 
 // PROJECTS DATA
