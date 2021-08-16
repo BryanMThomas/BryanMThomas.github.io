@@ -1,5 +1,4 @@
 import { nanoid } from 'nanoid';
-import pawesomeGif from '../images/pawesome-demo.gif';
 
 // HEAD DATA
 export const headData = {
@@ -17,11 +16,9 @@ export const heroData = {
 export const aboutData = {
   img: 'profile.jpg',
   paragraphOne:
-    'I started my career in quality engineering and test automation as a Software Development Engineer in Test. Today I am working towards expanding my knowledge of software development in relation to web development and DevOps in industy.',
-  paragraphTwo:
-    'My passions are full stack web development and building out tools/processes that assist with continous integration and the development lifecycle.',
-  paragraphThree:
-    'I am currently deveopling my skills in React JS, .NET Core, and the AWS Public Cloud',
+    'I have passion for building out tools/processes that assist with CICD and the development lifecycle.',
+  paragraphTwo: 'I am currently deveopling my skills as a Software Engineer at Microsoft',
+  paragraphThree: '',
 };
 
 // PROJECTS DATA
@@ -61,13 +58,12 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'pawesome.png',
-    title: 'Pawesome Dog Adoption Matching',
-    info: 'Learning project used to expand knowledge of React JS and state hooks abilities.',
-    info2:
-      'React JS, AWS Lambda, Dynamo DB, S3 Buckets, useState Hook, useEffect Hook, React Router',
-    url: pawesomeGif,
-    repo: 'https://github.com/BryanMThomas/pawesome',
+    img: '',
+    title: 'Inclusive Terminology Thesaurus',
+    info: 'Web App that identifies non inclusive terms and suggests alternatives.',
+    info2: 'React JS, AWS Amplify',
+    url: 'https://github.com/BryanMThomas/inclusive-thesaurus',
+    repo: 'https://inclusivethesaurus.com',
   },
 ];
 
