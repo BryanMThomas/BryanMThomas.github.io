@@ -71,16 +71,16 @@ const About = () => {
             <div className="skills">
               <p>
                 <strong>Software Development:</strong> Agile Development, Software Design, Data
-                Structures, Quality Assurance, Continuous Integration, Service Oriented
-                Architecture, MicroServices/Serverless Frameworks
+                Structures, Quality Assurance, Continuous Integration, Continous Deployment, Service
+                Oriented Architecture, MicroServices/Serverless Frameworks
               </p>
             </div>
           </Row>
           <Row>
             <div className="skills">
               <p>
-                <strong>Technologies:</strong> React, .NET, Node, Selenium, Jenkins, Amazon Web
-                Services (AWS), Docker, Kibana, Jira
+                <strong>Technologies:</strong> React, .NET, Node, Jenkins, Amazon Web Services
+                (AWS), Azure, Docker, Kibana, Jira
               </p>
             </div>
           </Row>
