@@ -62,8 +62,8 @@ export const projectsData = [
     title: 'Inclusive Terminology Thesaurus',
     info: 'Web App that identifies non inclusive terms and suggests alternatives.',
     info2: 'React JS, AWS Amplify',
-    url: 'https://github.com/BryanMThomas/inclusive-thesaurus',
-    repo: 'https://www.inclusivethesaurus.com/',
+    url: 'https://www.inclusivethesaurus.com/',
+    repo: 'https://github.com/BryanMThomas/inclusive-thesaurus',
   },
 ];
 
