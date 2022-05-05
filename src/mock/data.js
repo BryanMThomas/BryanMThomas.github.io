@@ -18,32 +18,38 @@ export const aboutData = {
   paragraphOne:
     'I have passion for building out tools/processes that assist with CICD and the development lifecycle.',
   paragraphTwo: 'I am currently deveopling my skills as a Software Engineer at Microsoft',
-  paragraphThree: '',
+  paragraphThree:
+    "Currently I am learning Distributed Systems and DevOps best practices. My learnings include pursuing Azure Fundamentals & Kubernetes and Cloud Native Associate certifications as well as reading 'Distributed Systems' by Brendan Burns",
 };
 
 // PROJECTS DATA
 export const projectsData = [
   {
     id: nanoid(),
+    img: 'inclusive-arch.png',
+    title: 'Inclusive Terminology Project',
+    info: 'Series of Apps that consume an Inclusive Terminology API identifies non inclusive terms and suggests alternatives. Consuming Apps Include Web App, GitHub Action, Outlook Extension',
+    info2: 'Azure Kubernetes Service (AKS), Azure Container Registry, React JS,',
+    url: 'http://40.89.251.158:3000/',
+    repo: 'https://github.com/BryanMThomas/InclusiveTerminology',
+  },
+  {
+    id: nanoid(),
     img: 'ttp_Project.png',
     title: 'Painting Estimate Web App',
-    info:
-      'Built to allow painting company to provide more consistent estimates and save historical data.',
+    info: 'Built to allow painting company to provide more consistent estimates and save historical data.',
     info2:
       'AWS Lambda, Dynamo DB, S3 Buckets, Amplify, React JS, useState Hook, React Bootstrap, React Router',
-    url:
-      'https://demo-portfolio-vids-gifs.s3-us-west-2.amazonaws.com/PaintingEstimateApp/paintingEstimateApp.mp4',
+    url: 'https://demo-portfolio-vids-gifs.s3-us-west-2.amazonaws.com/PaintingEstimateApp/paintingEstimateApp.mp4',
     repo: 'https://github.com/BryanMThomas/ToddThomasPaintingApp',
   },
   {
     id: nanoid(),
     img: 'VR_Airspace_Project.png',
     title: 'VR Airspace Control Tower',
-    info:
-      'VR team project completed in conjunction with General Dynamics to establish remote airspace in Virtual Reality. Created the ability to remotely control an airspace with access to realtime data including flight patterns, aircraft location, radio transmissiond, and view of the tarmac.',
+    info: 'VR team project completed in conjunction with General Dynamics to establish remote airspace in Virtual Reality. Created the ability to remotely control an airspace with access to realtime data including flight patterns, aircraft location, radio transmissiond, and view of the tarmac.',
     info2: 'AWS EC2 Instances, Swagger API, Node JS, Unity / C#',
-    url:
-      'https://demo-portfolio-vids-gifs.s3-us-west-2.amazonaws.com/VR_Airspace_Project/VR_Airspace_Project.mp4',
+    url: 'https://demo-portfolio-vids-gifs.s3-us-west-2.amazonaws.com/VR_Airspace_Project/VR_Airspace_Project.mp4',
     repo: 'https://github.com/BryanMThomas/VR_AirSpace_Project',
   },
   {
@@ -55,15 +61,6 @@ export const projectsData = [
       'AWS Lambda, Dynamo DB, S3 Buckets, Amplify, React JS, useState Hook, React Bootstrap, React Router',
     url: 'https://main.d3svg2y1msp5x4.amplifyapp.com/',
     repo: 'https://github.com/BryanMThomas/bryx-project',
-  },
-  {
-    id: nanoid(),
-    img: 'inclusive.png',
-    title: 'Inclusive Terminology Thesaurus',
-    info: 'Web App that identifies non inclusive terms and suggests alternatives.',
-    info2: 'React JS, AWS Amplify',
-    url: 'https://www.inclusivethesaurus.com/',
-    repo: 'https://github.com/BryanMThomas/inclusive-thesaurus',
   },
 ];
 
