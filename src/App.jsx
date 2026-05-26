@@ -5,6 +5,7 @@ import About from './sections/About.jsx';
 import Experience from './sections/Experience.jsx';
 import Ventures from './sections/Ventures.jsx';
 import OpenClaw from './sections/OpenClaw.jsx';
+import Lab from './sections/Lab.jsx';
 import Contact from './sections/Contact.jsx';
 
 export default function App() {
@@ -50,6 +51,8 @@ export default function App() {
         <Ventures />
         <div className="mx-auto h-px max-w-5xl bg-white/10" />
         <OpenClaw />
+        <div className="mx-auto h-px max-w-5xl bg-white/10" />
+        <Lab />
         <div className="mx-auto h-px max-w-5xl bg-white/10" />
         <Contact />
       </div>

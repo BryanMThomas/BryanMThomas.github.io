@@ -2,10 +2,10 @@ import React from 'react';
 import Reveal from '../components/Reveal.jsx';
 
 const stats = [
-  { v: '15,000+', l: 'AI conversations in pilot' },
-  { v: '40%', l: 'higher completion vs. surveys' },
-  { v: '10-eng', l: 'squad led as tech lead' },
-  { v: '3×', l: 'promotions in 4 years' },
+  { v: '0→1', l: 'products from pitch to launch' },
+  { v: '10-eng', l: 'squad I led as tech lead' },
+  { v: '3×', l: 'promoted in 4 years' },
+  { v: '5+ yrs', l: 'shipping production software' },
 ];
 
 const timeline = [
@@ -15,11 +15,11 @@ const timeline = [
     when: 'May 2025 — Present',
     featured: true,
     points: [
-      'Pitched an AI alternative to employee surveys at a hackathon → secured EVP & COO sponsorship, stood up a 10-engineer squad, and led it to pilot as technical lead.',
+      'Pitched an AI alternative to employee surveys at a hackathon → won executive sponsorship, stood up an engineering squad, and led it to pilot as technical lead.',
       'Shipped the core product: an AI interviewer that replaces surveys with natural conversations and real-time transcript analysis — sentiment, themes, action recommendations.',
-      'Built the evaluation platform non-engineers use to run their own prompt experiments — cut research iteration from weeks to hours.',
+      'Built the evaluation platform non-engineers use to run their own prompt experiments.',
       'Implemented a deterministic pre-model AI safety layer that cleared enterprise responsible-AI review.',
-      'Ran 8+ workshops and a shared plugin marketplace (17+ contributors, 3 external teams) that got non-engineers shipping prototypes.',
+      'Ran internal workshops and a shared plugin marketplace that got non-engineers shipping their own prototypes.',
     ],
   },
   {
@@ -27,21 +27,30 @@ const timeline = [
     role: 'Software Engineer 2',
     when: 'Mar 2023 — May 2025',
     points: [
-      'Owned multi-survey scheduling end-to-end — 4× re-engagement; highest-retention feature in the product.',
-      'Led a monolith → modular-microservices transition; new-dev time-to-first-PR 2 weeks → ~4 days.',
+      'Owned multi-survey scheduling end-to-end — it became one of the product’s highest-retention features.',
+      'Led a monolith → modular-microservices transition that sped up new-developer onboarding.',
     ],
   },
   {
     org: 'Microsoft — Azure ARC',
     role: 'Software Engineer',
     when: 'Aug 2021 — Mar 2023',
-    points: ['Built a hybrid-cloud onboarding desktop app deployed to 50K+ enterprise endpoints.'],
+    points: ['Built a hybrid-cloud onboarding desktop app deployed across enterprise environments.'],
+  },
+  {
+    org: 'Independent — AI & Product Consulting',
+    role: 'Consultant',
+    when: '2024 — Present',
+    points: [
+      'Year-long engagement building product and AI features for an early-stage agentic-commerce startup.',
+      'Stood up the AI image-generation pipeline for an interior-design studio (Ruby Lantern Design) — turning a room photo and a few preferences into curated design concepts.',
+    ],
   },
   {
     org: 'GoDaddy',
     role: 'Full Stack Software Engineer',
     when: 'Dec 2018 — Jul 2021',
-    points: ['CRM platform powering 1/3 of revenue; event-driven AWS integrations lifted upsell +20% and NPS +15 across 2M+ accounts.'],
+    points: ['Worked on the CRM platform behind a large share of company revenue — event-driven AWS integrations and customer-facing React features that lifted upsell conversion.'],
   },
 ];
 

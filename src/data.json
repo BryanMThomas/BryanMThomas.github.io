@@ -24,19 +24,19 @@
       "cluster": "ai",
       "blurb": "An autonomous 8-agent personal-ops fleet I designed and run: an orchestrator delegating to specialized agents over MCP tool-calling, multi-model via OpenRouter, cron-scheduled.",
       "url": "https://github.com/BryanMThomas/openclaw-skeleton",
-      "x": -4.439,
-      "y": 0.908,
-      "z": -0.428
+      "x": -4.394,
+      "y": 0.77,
+      "z": -0.421
     },
     {
       "id": "triphelm-ai",
-      "label": "TripHelm (Hilo agent)",
+      "label": "TripHelm (Hilo)",
       "cluster": "ai",
-      "blurb": "TripHelm's AI: a LangGraph multi-agent system with 7 specialized agents and MCP tool-calling. Its assistant 'Hilo' is named after my corgi.",
+      "blurb": "TripHelm's AI layer is an MCP server that exposes the whole itinerary as tool-callable data \u2014 so any AI client (Claude, ChatGPT, Perplexity) can plan a trip straight onto the canvas. Its assistant 'Hilo' is named after my corgi.",
       "url": "https://github.com/BryanMThomas/triphelm-showcase",
-      "x": -4.228,
-      "y": 4.689,
-      "z": 2.646
+      "x": -4.614,
+      "y": 4.184,
+      "z": 2.841
     },
     {
       "id": "mcp",
@@ -44,9 +44,9 @@
       "cluster": "ai",
       "blurb": "Model Context Protocol servers, sub-agents, and tool-calling \u2014 the connective tissue of agentic systems.",
       "url": null,
-      "x": -4.586,
-      "y": 0.458,
-      "z": -2.272
+      "x": -4.662,
+      "y": 0.613,
+      "z": -1.998
     },
     {
       "id": "evals",
@@ -54,9 +54,9 @@
       "cluster": "ai",
       "blurb": "Evaluation and experimentation platforms that let non-engineers run prompt experiments and measure quality.",
       "url": null,
-      "x": -4.059,
-      "y": -1.06,
-      "z": -3.495
+      "x": -4.03,
+      "y": -1.005,
+      "z": -3.459
     },
     {
       "id": "prompting",
@@ -64,9 +64,9 @@
       "cluster": "ai",
       "blurb": "Advanced prompt engineering and conversation design for production LLM products.",
       "url": null,
-      "x": -3.584,
-      "y": -1.167,
-      "z": -3.35
+      "x": -3.507,
+      "y": -1.324,
+      "z": -3.425
     },
     {
       "id": "rag",
@@ -74,9 +74,9 @@
       "cluster": "ai",
       "blurb": "Retrieval-augmented generation, embeddings, and vector search \u2014 the technique this very page is built on.",
       "url": null,
-      "x": -3.068,
-      "y": -0.333,
-      "z": -2.814
+      "x": -2.993,
+      "y": -0.453,
+      "z": -2.88
     },
     {
       "id": "voice",
@@ -84,9 +84,9 @@
       "cluster": "ai",
       "blurb": "Prototyped a real-time voice experience with the OpenAI Realtime API + WebRTC and a backstage-supervisor agent pattern.",
       "url": null,
-      "x": -3.585,
-      "y": -0.871,
-      "z": -1.415
+      "x": -3.486,
+      "y": -1.075,
+      "z": -1.604
     },
     {
       "id": "safety",
@@ -94,9 +94,9 @@
       "cluster": "ai",
       "blurb": "A deterministic, pre-model safety layer (policy-violation engine, content filtering) that cleared enterprise responsible-AI review.",
       "url": null,
-      "x": -3.041,
-      "y": -0.229,
-      "z": -2.72
+      "x": -3.055,
+      "y": -0.031,
+      "z": -2.599
     },
     {
       "id": "triphelm",
@@ -104,9 +104,9 @@
       "cluster": "product",
       "blurb": "An AI travel-planning product that builds trips minute by minute. Founder. Live at triphelm.com.",
       "url": "https://triphelm.com",
-      "x": -2.611,
-      "y": 4.046,
-      "z": 4.593
+      "x": -2.61,
+      "y": 3.956,
+      "z": 4.562
     },
     {
       "id": "bryxbids",
@@ -114,9 +114,9 @@
       "cluster": "product",
       "blurb": "A multi-tenant SaaS proposal tool for contractors \u2014 visual editor, pixel-accurate PDF export, Stripe billing. Founder.",
       "url": "https://bryxbids.com",
-      "x": -1.743,
-      "y": -0.07,
-      "z": 3.436
+      "x": -1.787,
+      "y": 0.325,
+      "z": 3.516
     },
     {
       "id": "codecapital",
@@ -124,49 +124,49 @@
       "cluster": "product",
       "blurb": "My content endeavor \u2014 building in public about engineering, AI, and entrepreneurship.",
       "url": null,
-      "x": -1.606,
-      "y": -0.514,
-      "z": 0.1
+      "x": -1.612,
+      "y": -0.193,
+      "z": 0.108
     },
     {
       "id": "eve",
       "label": "Microsoft \u2014 EVE (Applied AI)",
       "cluster": "experience",
-      "blurb": "Sr. Applied AI Engineer. Pitched an AI alternative to employee surveys at a hackathon \u2192 EVP-sponsored product, technical lead of a 10-engineer squad. 15,000+ conversations.",
+      "blurb": "Sr. Applied AI Engineer. Pitched an AI alternative to employee surveys at a hackathon \u2192 an executive-sponsored product, technical lead of the engineering squad that shipped it.",
       "url": null,
-      "x": -2.688,
-      "y": -4.353,
-      "z": 1.673
+      "x": -2.618,
+      "y": -4.549,
+      "z": 1.408
     },
     {
       "id": "vivapulse",
       "label": "Microsoft \u2014 Viva Pulse",
       "cluster": "experience",
-      "blurb": "Software Engineer 2. Owned multi-survey scheduling end-to-end; 4x re-engagement; led a monolith\u2192microservices transition.",
+      "blurb": "Software Engineer 2. Owned multi-survey scheduling end-to-end \u2014 a top-retention feature \u2014 and led a monolith \u2192 microservices transition.",
       "url": null,
-      "x": -1.944,
-      "y": -5.534,
-      "z": 3.041
+      "x": -1.962,
+      "y": -5.445,
+      "z": 2.916
     },
     {
       "id": "azurearc",
       "label": "Microsoft \u2014 Azure ARC",
       "cluster": "experience",
-      "blurb": "Software Engineer. Built a desktop app connecting on-prem devices to Azure, deployed to 50K+ enterprise endpoints.",
+      "blurb": "Software Engineer. Built a desktop app connecting on-prem devices to Azure, deployed across enterprise environments.",
       "url": null,
-      "x": -1.389,
-      "y": -2.889,
-      "z": -0.659
+      "x": -1.373,
+      "y": -2.875,
+      "z": -0.726
     },
     {
       "id": "godaddy",
       "label": "GoDaddy",
       "cluster": "experience",
-      "blurb": "Full Stack Software Engineer on the CRM platform powering 1/3 of revenue. Event-driven AWS integrations, React features.",
+      "blurb": "Full Stack Software Engineer on the CRM platform behind a large share of company revenue. Event-driven AWS integrations, React features.",
       "url": null,
-      "x": -1.476,
-      "y": -3.506,
-      "z": 3.518
+      "x": -1.453,
+      "y": -3.441,
+      "z": 3.368
     },
     {
       "id": "asu",
@@ -174,9 +174,9 @@
       "cluster": "experience",
       "blurb": "B.S. Computer Science, Magna Cum Laude. Phoenix, Arizona.",
       "url": null,
-      "x": 3.123,
-      "y": -0.97,
-      "z": -0.612
+      "x": 3.136,
+      "y": -0.965,
+      "z": -0.678
     },
     {
       "id": "hilo",
@@ -184,9 +184,9 @@
       "cluster": "interest",
       "blurb": "My corgi, Hilo. TripHelm's AI assistant is named after him. \ud83d\udc15",
       "url": null,
-      "x": -1.785,
-      "y": 4.958,
-      "z": 4.022
+      "x": -1.768,
+      "y": 4.69,
+      "z": 3.98
     },
     {
       "id": "suns",
@@ -194,9 +194,9 @@
       "cluster": "interest",
       "blurb": "NBA. Phoenix Suns fan.",
       "url": null,
-      "x": 6.671,
-      "y": -1.058,
-      "z": -0.173
+      "x": 6.69,
+      "y": -1.201,
+      "z": -0.143
     },
     {
       "id": "cardinals",
@@ -205,8 +205,8 @@
       "blurb": "NFL. Arizona Cardinals.",
       "url": null,
       "x": 7.0,
-      "y": -1.127,
-      "z": 0.238
+      "y": -1.267,
+      "z": 0.34
     },
     {
       "id": "seahawks",
@@ -214,9 +214,9 @@
       "cluster": "interest",
       "blurb": "NFL. Seattle Seahawks \u2014 home team now.",
       "url": null,
-      "x": 5.722,
-      "y": -1.388,
-      "z": 2.321
+      "x": 5.693,
+      "y": -1.485,
+      "z": 2.482
     },
     {
       "id": "steelers",
@@ -224,9 +224,9 @@
       "cluster": "interest",
       "blurb": "NFL. Pittsburgh Steelers.",
       "url": null,
-      "x": 5.248,
-      "y": -1.371,
-      "z": 1.97
+      "x": 5.214,
+      "y": -1.41,
+      "z": 2.167
     },
     {
       "id": "dirtbike",
@@ -234,9 +234,9 @@
       "cluster": "interest",
       "blurb": "Riding dirt bikes off-road \u2014 desert trails, adventure.",
       "url": null,
-      "x": 3.676,
-      "y": 2.275,
-      "z": -2.544
+      "x": 3.702,
+      "y": 2.443,
+      "z": -2.576
     },
     {
       "id": "ebike",
@@ -244,9 +244,9 @@
       "cluster": "interest",
       "blurb": "Commute to work on an electric bike that hits 45 mph on the throttle.",
       "url": null,
-      "x": 1.252,
-      "y": 1.128,
-      "z": -1.122
+      "x": 1.26,
+      "y": 1.411,
+      "z": -1.124
     },
     {
       "id": "camping",
@@ -254,9 +254,9 @@
       "cluster": "interest",
       "blurb": "Camping outdoors \u2014 tents, campfires, getting out into nature.",
       "url": null,
-      "x": 3.494,
-      "y": 3.045,
-      "z": -2.795
+      "x": 3.528,
+      "y": 3.118,
+      "z": -2.843
     },
     {
       "id": "golf",
@@ -264,9 +264,9 @@
       "cluster": "interest",
       "blurb": "Playing golf.",
       "url": null,
-      "x": 2.294,
-      "y": 1.42,
-      "z": -1.159
+      "x": 2.327,
+      "y": 1.546,
+      "z": -1.188
     },
     {
       "id": "beach",
@@ -274,9 +274,9 @@
       "cluster": "interest",
       "blurb": "Beach vacations in Orange County & San Diego \u2014 Laguna Beach and Dana Point are favorites.",
       "url": null,
-      "x": 2.317,
-      "y": 3.231,
-      "z": -0.641
+      "x": 2.335,
+      "y": 3.382,
+      "z": -0.651
     },
     {
       "id": "phoenix",
@@ -284,9 +284,9 @@
       "cluster": "interest",
       "blurb": "Born and raised in Phoenix, Arizona.",
       "url": null,
-      "x": 5.036,
-      "y": 0.281,
-      "z": -1.36
+      "x": 5.04,
+      "y": 0.279,
+      "z": -1.372
     }
   ],
   "edges": [
@@ -296,9 +296,14 @@
       "w": 0.721
     },
     {
-      "a": "hilo",
+      "a": "triphelm",
       "b": "triphelm-ai",
-      "w": 0.781
+      "w": 0.772
+    },
+    {
+      "a": "mcp",
+      "b": "triphelm-ai",
+      "w": 0.736
     },
     {
       "a": "evals",
@@ -319,11 +324,6 @@
       "a": "evals",
       "b": "safety",
       "w": 0.675
-    },
-    {
-      "a": "triphelm",
-      "b": "triphelm-ai",
-      "w": 0.779
     },
     {
       "a": "bryxbids",
@@ -354,6 +354,11 @@
       "a": "asu",
       "b": "phoenix",
       "w": 0.676
+    },
+    {
+      "a": "hilo",
+      "b": "triphelm-ai",
+      "w": 0.763
     },
     {
       "a": "cardinals",

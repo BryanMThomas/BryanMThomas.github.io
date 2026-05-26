@@ -5,9 +5,9 @@ const ventures = [
   {
     name: 'TripHelm',
     img: '/img/triphelm.png',
-    tagline: 'AI travel planner — plan trips minute by minute.',
-    body: 'A production conversational-AI app on a LangGraph multi-agent system: 7 specialized agents with MCP tool-calling, 30–40% latency cut via parallel orchestration. Its assistant, Hilo, shares a name with my corgi.',
-    tags: ['TypeScript', 'LangGraph', 'MCP', 'Vercel AI SDK'],
+    tagline: 'Plan trips minute by minute — from your own AI.',
+    body: 'A drag-and-drop itinerary canvas with an MCP server that exposes the whole trip as tool-callable data. Plan manually, or tell Claude/ChatGPT/Perplexity "put my Kyoto trip in TripHelm" and watch it land on the calendar. Its assistant, Hilo, shares a name with my corgi.',
+    tags: ['Next.js 15', 'MCP server', 'Prisma · Postgres', 'WorkOS'],
     live: 'https://triphelm.com',
     repo: 'https://github.com/BryanMThomas/triphelm-showcase',
   },

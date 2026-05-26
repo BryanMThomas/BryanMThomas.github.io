@@ -4,7 +4,7 @@ import Reveal from '../components/Reveal.jsx';
 const interests = [
   'Dirtbiking', '45-mph e-bike commute', 'Camping', 'Golf',
   'Phoenix Suns', 'Cardinals', 'Seahawks', 'Steelers',
-  'Laguna & Dana Point', 'Corgi dad 🐕',
+  'Laguna & Dana Point',
 ];
 
 export default function About() {
@@ -25,15 +25,15 @@ export default function About() {
           <div className="space-y-5 text-lg leading-relaxed text-mist/85">
             <p>
               I'm an applied AI engineer at Microsoft, where I lead the technical build of
-              conversational AI for employee listening — from a hackathon pitch to an
-              EVP-sponsored product with <span className="text-cyan">15,000+</span> real conversations.
+              conversational AI for employee listening — taking it from a hackathon pitch to an
+              EVP-sponsored product.
             </p>
             <p>
-              I build production LLM systems <em>and</em> the multi-agent tooling behind them — and
-              I do it for fun, too: an 8-agent ops fleet (<span className="text-cyan">OpenClaw</span>),
-              a LangGraph travel planner (<span className="text-cyan">TripHelm</span>), and a
-              contractor SaaS (<span className="text-cyan">BryxBids</span>). I like being the engineer
-              who ships the hard thing and helps everyone else ship with AI too.
+              I build production LLM systems and the tooling behind them — and the same on the side:
+              an 8-agent ops fleet (<span className="text-cyan">OpenClaw</span>), an MCP-native
+              travel planner (<span className="text-cyan">TripHelm</span>), and a contractor SaaS
+              (<span className="text-cyan">BryxBids</span>). I like shipping the hard thing and making
+              it easy for everyone else to build with AI too.
             </p>
             <p>
               Phoenix-raised, <span className="text-amber">ASU</span> grad, now in Seattle. Off the

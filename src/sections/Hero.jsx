@@ -43,6 +43,7 @@ export default function Hero() {
             <a className="transition hover:text-cyan" href="#about">About</a>
             <a className="transition hover:text-cyan" href="#ventures">Work</a>
             <a className="transition hover:text-cyan" href="#openclaw">OpenClaw</a>
+            <a className="transition hover:text-cyan" href="#lab">Now</a>
             <a className="transition hover:text-cyan" href="https://github.com/BryanMThomas" target="_blank" rel="noreferrer">GitHub</a>
           </nav>
         </header>
