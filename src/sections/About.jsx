@@ -37,9 +37,9 @@ export default function About() {
             </p>
             <p>
               Phoenix-raised, <span className="text-amber">ASU</span> grad, now in Seattle. Off the
-              keyboard you'll find me dirtbiking, camping, on the golf course, or at a beach in
-              Laguna or Dana Point with my corgi <span className="text-amber">Hilo</span> — yes, the
-              same Hilo I named TripHelm's AI assistant after.
+              keyboard you'll find me dirtbiking, camping, on the golf course, or chasing a beach day
+              in Laguna or Dana Point. And at home: my corgi <span className="text-amber">Hilo</span> —
+              yes, the same Hilo I named TripHelm's AI assistant after.
             </p>
           </div>
         </Reveal>
