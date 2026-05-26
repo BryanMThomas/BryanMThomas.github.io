@@ -10,8 +10,14 @@ const tools = [
   { name: 'GitHub Copilot / VS Code', note: 'The original copilot. Still in the rotation for quick inline help.' },
 ];
 
-// frameworks I'm going deeper on right now
-const exploring = ['LangGraph', 'Vercel AI SDK', 'Multi-agent orchestration', 'Agent evals'];
+// frontier ideas I'm going deeper on right now
+const exploring = [
+  'Vectorization & embeddings',
+  'Agent evals',
+  'Multi-agent orchestration',
+  'Agent-to-agent handoff',
+  'Human-in-the-loop',
+];
 
 export default function Lab() {
   return (

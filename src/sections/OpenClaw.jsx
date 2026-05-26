@@ -18,7 +18,7 @@ export default function OpenClaw() {
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan/80">OpenClaw</p>
             <h2 className="mt-3 text-3xl font-extrabold text-mist md:text-4xl">
-              An 8-agent fleet I designed and run.
+              An agent fleet I designed and run.
             </h2>
             <p className="mt-4 leading-relaxed text-mist/75">
               OpenClaw is an autonomous multi-agent system: an <span className="text-cyan">orchestrator</span> delegates

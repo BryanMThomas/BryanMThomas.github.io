@@ -21,7 +21,7 @@ CLUSTERS = {
 NODES = [
     # --- AI & Agents ---
     {"id": "openclaw", "label": "OpenClaw", "cluster": "ai",
-     "blurb": "An autonomous 8-agent personal-ops fleet I designed and run: an orchestrator delegating to specialized agents over MCP tool-calling, multi-model via OpenRouter, cron-scheduled.",
+     "blurb": "An autonomous personal-ops agent fleet I designed and run: an orchestrator delegating to specialized agents over MCP tool-calling, multi-model via OpenRouter, cron-scheduled.",
      "url": "https://github.com/BryanMThomas/openclaw-skeleton",
      "embed": "OpenClaw: an autonomous multi-agent system, a fleet of eight specialized AI agents coordinated by an orchestrator agent over MCP tool calling, scheduled with cron, multi-model via OpenRouter. Agent orchestration, automation, autonomy, AI infrastructure."},
     {"id": "triphelm-ai", "label": "TripHelm (Hilo)", "cluster": "ai",

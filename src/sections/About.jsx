@@ -30,7 +30,7 @@ export default function About() {
             </p>
             <p>
               I build production LLM systems and the tooling behind them — and the same on the side:
-              an 8-agent ops fleet (<span className="text-cyan">OpenClaw</span>), an MCP-native
+              an agent fleet (<span className="text-cyan">OpenClaw</span>), an MCP-native
               travel planner (<span className="text-cyan">TripHelm</span>), and a contractor SaaS
               (<span className="text-cyan">BryxBids</span>). I like shipping the hard thing and making
               it easy for everyone else to build with AI too.
