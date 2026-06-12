@@ -6,7 +6,8 @@ import EmbeddingSpace from './EmbeddingSpace.jsx';
 export default function HeroCanvas({ selected, setSelected, hovered, setHovered }) {
   return (
     <Canvas
-      camera={{ position: [0, 2, 15], fov: 55 }}
+      // starts pulled back; Rig dollies in to the resting framing on load
+      camera={{ position: [0, 4, 29.7], fov: 55 }}
       dpr={[1, 2]}
       onPointerMissed={() => setSelected(null)}
     >

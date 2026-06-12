@@ -68,22 +68,46 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 z-10 flex flex-col justify-between p-5 md:p-8">
         <header className="flex items-start justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-extrabold leading-none text-mist md:text-4xl">
+            <h1 className="animate-fade-up text-2xl font-extrabold leading-none text-mist md:text-4xl">
               Bryan&nbsp;Thomas
             </h1>
-            <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.28em] text-cyan/90 md:text-xs">
+            <p
+              className="mt-2 animate-fade-up font-mono text-[11px] uppercase tracking-[0.28em] text-cyan/90 md:text-xs"
+              style={{ animationDelay: '250ms' }}
+            >
               Applied AI Engineer · Seattle
             </p>
-            <p className="mt-2 max-w-xs text-sm text-mist/60">
+            <p
+              className="mt-2 max-w-xs animate-fade-up text-sm text-mist/60"
+              style={{ animationDelay: '450ms' }}
+            >
               I ship production AI systems — and the multi-agent tooling behind them.
             </p>
           </div>
-          <nav aria-label="Primary" className="pointer-events-auto hidden gap-4 font-mono text-[11px] uppercase tracking-widest text-mist/60 md:flex">
-            <a className="transition hover:text-cyan" href="#about">About</a>
-            <a className="transition hover:text-cyan" href="#ventures">Work</a>
-            <a className="transition hover:text-cyan" href="#openclaw">OpenClaw</a>
-            <a className="transition hover:text-cyan" href="#lab">Now</a>
-            <a className="transition hover:text-cyan" href="https://github.com/BryanMThomas" target="_blank" rel="noreferrer">GitHub</a>
+          <nav
+            aria-label="Primary"
+            className="pointer-events-auto hidden gap-4 font-mono text-[11px] uppercase tracking-widest text-mist/60 md:flex"
+          >
+            <a className="transition hover:text-cyan" href="#about">
+              About
+            </a>
+            <a className="transition hover:text-cyan" href="#ventures">
+              Work
+            </a>
+            <a className="transition hover:text-cyan" href="#openclaw">
+              OpenClaw
+            </a>
+            <a className="transition hover:text-cyan" href="#lab">
+              Now
+            </a>
+            <a
+              className="transition hover:text-cyan"
+              href="https://github.com/BryanMThomas"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
           </nav>
         </header>
 
@@ -92,7 +116,11 @@ export default function Hero() {
             <div className="flex flex-wrap gap-x-4 gap-y-1">
               {Object.entries(data.clusters).map(([k, c]) => (
                 <span key={k} className="flex items-center gap-1.5 text-[11px] text-mist/70">
-                  <span aria-hidden="true" className="inline-block h-2.5 w-2.5 rounded-full" style={{ background: c.color, boxShadow: `0 0 8px ${c.color}` }} />
+                  <span
+                    aria-hidden="true"
+                    className="inline-block h-2.5 w-2.5 rounded-full"
+                    style={{ background: c.color, boxShadow: `0 0 8px ${c.color}` }}
+                  />
                   {c.label}
                 </span>
               ))}
@@ -103,7 +131,8 @@ export default function Hero() {
           </div>
 
           <p className="max-w-[16rem] text-right font-mono text-[10px] leading-relaxed text-mist/40">
-            every point is a real embedding<br />
+            every point is a real embedding
+            <br />
             (Gemini, 3072-d) projected to 3D —<br />
             <span className="text-cyan/70">proximity = relatedness</span>
           </p>
@@ -114,26 +143,50 @@ export default function Hero() {
         <aside className="pointer-events-auto absolute bottom-20 left-1/2 z-20 w-[calc(100%-2rem)] max-w-md -translate-x-1/2 rounded-2xl border border-white/10 bg-ink/85 p-5 backdrop-blur-md md:bottom-24 md:left-8 md:translate-x-0">
           <div className="flex items-start justify-between gap-3">
             <div className="flex items-center gap-2">
-              <span aria-hidden="true" className="inline-block h-3 w-3 rounded-full" style={{ background: data.clusters[sel.cluster].color, boxShadow: `0 0 10px ${data.clusters[sel.cluster].color}` }} />
+              <span
+                aria-hidden="true"
+                className="inline-block h-3 w-3 rounded-full"
+                style={{
+                  background: data.clusters[sel.cluster].color,
+                  boxShadow: `0 0 10px ${data.clusters[sel.cluster].color}`,
+                }}
+              />
               <h2 className="text-lg font-bold text-mist">{sel.label}</h2>
             </div>
-            <button onClick={() => setSelected(null)} className="rounded-md px-2 text-mist/50 transition hover:text-mist" aria-label="Close">✕</button>
+            <button
+              onClick={() => setSelected(null)}
+              className="rounded-md px-2 text-mist/50 transition hover:text-mist"
+              aria-label="Close"
+            >
+              ✕
+            </button>
           </div>
           <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-mist/40">
             {data.clusters[sel.cluster].label}
           </p>
           <p className="mt-3 text-sm leading-relaxed text-mist/80">{sel.blurb}</p>
           {sel.url && (
-            <a href={sel.url} target="_blank" rel="noreferrer" className="mt-3 inline-block font-mono text-xs text-cyan transition hover:text-amber">
+            <a
+              href={sel.url}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 inline-block font-mono text-xs text-cyan transition hover:text-amber"
+            >
               {sel.url.replace('https://', '')} ↗
             </a>
           )}
           {neighbors.length > 0 && (
             <div className="mt-4 border-t border-white/10 pt-3">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-mist/40">Closest in embedding space</p>
+              <p className="font-mono text-[10px] uppercase tracking-widest text-mist/40">
+                Closest in embedding space
+              </p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {neighbors.map((n) => (
-                  <button key={n.id} onClick={() => setSelected(n.id)} className="rounded-full border border-white/10 px-2.5 py-1 text-xs text-mist/70 transition hover:border-cyan/60 hover:text-cyan">
+                  <button
+                    key={n.id}
+                    onClick={() => setSelected(n.id)}
+                    className="rounded-full border border-white/10 px-2.5 py-1 text-xs text-mist/70 transition hover:border-cyan/60 hover:text-cyan"
+                  >
                     {n.label}
                   </button>
                 ))}
@@ -143,7 +196,10 @@ export default function Hero() {
         </aside>
       )}
 
-      <a href="#about" className="pointer-events-auto absolute bottom-6 left-1/2 z-10 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.25em] text-mist/40 transition hover:text-cyan motion-safe:animate-bounce">
+      <a
+        href="#about"
+        className="pointer-events-auto absolute bottom-6 left-1/2 z-10 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.25em] text-mist/40 transition hover:text-cyan motion-safe:animate-bounce"
+      >
         ↓ scroll
       </a>
     </section>

@@ -1,5 +1,5 @@
 import React, { useMemo, useRef, useState } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 import { Html, Line, OrbitControls, Points, PointMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 import data from '../data.js';
@@ -10,7 +10,14 @@ const colorOf = (n) => data.clusters[n.cluster].color;
 
 // anchor labels shown when nothing is active (keeps the cloud uncluttered)
 const PRIMARY = new Set([
-  'openclaw', 'triphelm', 'bryxbids', 'eve', 'hilo', 'suns', 'dirtbike', 'rag',
+  'openclaw',
+  'triphelm',
+  'bryxbids',
+  'eve',
+  'hilo',
+  'suns',
+  'dirtbike',
+  'rag',
 ]);
 
 // faint ambient starfield for depth
@@ -43,12 +50,20 @@ function Starfield() {
 
 function Node({ node, hovered, selected, dimmed, showLabel, onOver, onOut, onClick }) {
   const ref = useRef();
+  const halo = useRef();
+  // per-node phase so the cloud breathes organically, not in lockstep
+  const phase = useMemo(() => node.x * 5.1 + node.y * 3.7, [node]);
   const active = hovered || selected;
   const color = colorOf(node);
-  useFrame(() => {
+  useFrame((state) => {
     if (!ref.current) return;
     const target = active ? 1.7 : 1;
     ref.current.scale.lerp(new THREE.Vector3(target, target, target), 0.15);
+    if (halo.current) {
+      const base = active ? 2.8 : 2.1;
+      const s = base + Math.sin(state.clock.elapsedTime * 1.4 + phase) * 0.22;
+      halo.current.scale.setScalar(s);
+    }
   });
   const opacity = dimmed ? 0.18 : 1;
   return (
@@ -73,7 +88,7 @@ function Node({ node, hovered, selected, dimmed, showLabel, onOver, onOut, onCli
         <meshBasicMaterial color={color} transparent opacity={opacity} toneMapped={false} />
       </mesh>
       {/* glow halo */}
-      <mesh scale={active ? 2.8 : 2.1}>
+      <mesh ref={halo} scale={active ? 2.8 : 2.1}>
         <sphereGeometry args={[0.16, 16, 16]} />
         <meshBasicMaterial
           color={color}
@@ -129,8 +144,28 @@ function Edges({ activeId }) {
   });
 }
 
+const INTRO_FROM = 30; // camera distance the dolly-in starts from
+const INTRO_TO = 15.2; // resting distance (matches the original framing)
+const INTRO_SECS = 2.6;
+
 function Rig() {
   const reducedMotion = usePrefersReducedMotion();
+  const { camera } = useThree();
+  const start = useRef(null);
+  const done = useRef(false);
+  useFrame((state) => {
+    if (done.current) return;
+    if (reducedMotion) {
+      camera.position.setLength(INTRO_TO);
+      done.current = true;
+      return;
+    }
+    if (start.current === null) start.current = state.clock.elapsedTime;
+    const t = Math.min((state.clock.elapsedTime - start.current) / INTRO_SECS, 1);
+    const eased = 1 - Math.pow(1 - t, 3);
+    camera.position.setLength(INTRO_FROM - (INTRO_FROM - INTRO_TO) * eased);
+    if (t >= 1) done.current = true;
+  });
   return (
     <OrbitControls
       makeDefault
@@ -177,7 +212,5 @@ export default function EmbeddingSpace({ selected, setSelected, setHovered, hove
 }
 
 function isNeighbor(a, b) {
-  return data.edges.some(
-    (e) => (e.a === a && e.b === b) || (e.a === b && e.b === a)
-  );
+  return data.edges.some((e) => (e.a === a && e.b === b) || (e.a === b && e.b === a));
 }

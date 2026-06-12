@@ -10,6 +10,12 @@ import OpenClaw from './sections/OpenClaw.jsx';
 import Lab from './sections/Lab.jsx';
 import Contact from './sections/Contact.jsx';
 
+function Divider() {
+  return (
+    <div className="mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-cyan/25 to-transparent" />
+  );
+}
+
 export default function App() {
   useEffect(() => {
     if (prefersReducedMotion()) return undefined;
@@ -50,18 +56,19 @@ export default function App() {
         Skip to content
       </a>
       <ScrollProgress />
+      <div aria-hidden="true" className="noise" />
       <Hero />
       <main className="relative z-10 bg-ink">
         <About />
-        <div className="mx-auto h-px max-w-5xl bg-white/10" />
+        <Divider />
         <Experience />
-        <div className="mx-auto h-px max-w-5xl bg-white/10" />
+        <Divider />
         <Ventures />
-        <div className="mx-auto h-px max-w-5xl bg-white/10" />
+        <Divider />
         <OpenClaw />
-        <div className="mx-auto h-px max-w-5xl bg-white/10" />
+        <Divider />
         <Lab />
-        <div className="mx-auto h-px max-w-5xl bg-white/10" />
+        <Divider />
         <Contact />
       </main>
     </div>

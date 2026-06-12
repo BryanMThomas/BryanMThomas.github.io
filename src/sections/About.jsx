@@ -1,29 +1,46 @@
 import React from 'react';
 import Reveal from '../components/Reveal.jsx';
+import Aurora from '../components/Aurora.jsx';
 
 const interests = [
-  'Dirtbiking', '45-mph e-bike commute', 'Camping', 'Golf',
-  'Phoenix Suns', 'Cardinals', 'Seahawks', 'Steelers',
+  'Dirtbiking',
+  '45-mph e-bike commute',
+  'Camping',
+  'Golf',
+  'Phoenix Suns',
+  'Cardinals',
+  'Seahawks',
+  'Steelers',
   'Laguna & Dana Point',
 ];
 
 export default function About() {
   return (
     <section id="about" className="relative mx-auto max-w-5xl px-6 py-28 md:py-36">
+      <Aurora a="#3fd0e0" b="#8a7cf0" />
       <Reveal>
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan/80">About</p>
       </Reveal>
       <div className="mt-8 grid items-start gap-10 md:grid-cols-[200px_1fr]">
         <Reveal>
-          <img
-            src="/img/avatar.webp"
-            alt="Illustrated portrait of Bryan Thomas"
-            width="800"
-            height="800"
-            loading="lazy"
-            decoding="async"
-            className="w-40 rounded-2xl border border-white/10 shadow-2xl md:w-full"
-          />
+          <div className="relative w-40 md:w-full">
+            <div
+              aria-hidden="true"
+              className="absolute -inset-1.5 rounded-[1.4rem] opacity-60 blur-md motion-safe:animate-spin-slow"
+              style={{
+                background: 'conic-gradient(from 0deg, #3fd0e0, #8a7cf0, #f6b352, #3fd0e0)',
+              }}
+            />
+            <img
+              src="/img/avatar.webp"
+              alt="Illustrated portrait of Bryan Thomas"
+              width="800"
+              height="800"
+              loading="lazy"
+              decoding="async"
+              className="relative w-full rounded-2xl border border-white/10 shadow-2xl"
+            />
+          </div>
         </Reveal>
         <Reveal delay={100}>
           <div className="space-y-5 text-lg leading-relaxed text-mist/85">
@@ -34,16 +51,17 @@ export default function About() {
             </p>
             <p>
               I build production LLM systems and the tooling behind them — and the same on the side:
-              an agent fleet (<span className="text-cyan">OpenClaw</span>), an MCP-native
-              travel planner (<span className="text-cyan">TripHelm</span>), and a contractor SaaS
-              (<span className="text-cyan">BryxBids</span>). I like shipping the hard thing and making
-              it easy for everyone else to build with AI too.
+              an agent fleet (<span className="text-cyan">OpenClaw</span>), an MCP-native travel
+              planner (<span className="text-cyan">TripHelm</span>), and a contractor SaaS (
+              <span className="text-cyan">BryxBids</span>). I like shipping the hard thing and
+              making it easy for everyone else to build with AI too.
             </p>
             <p>
               Phoenix-raised, <span className="text-amber">ASU</span> grad, now in Seattle. Off the
-              keyboard you'll find me dirtbiking, camping, on the golf course, or chasing a beach day
-              in Laguna or Dana Point. And at home: my corgi <span className="text-amber">Hilo</span> —
-              yes, the same Hilo I named TripHelm's AI assistant after.
+              keyboard you'll find me dirtbiking, camping, on the golf course, or chasing a beach
+              day in Laguna or Dana Point. And at home: my corgi{' '}
+              <span className="text-amber">Hilo</span> — yes, the same Hilo I named TripHelm's AI
+              assistant after.
             </p>
           </div>
         </Reveal>
@@ -51,7 +69,10 @@ export default function About() {
       <Reveal delay={150}>
         <div className="mt-8 flex flex-wrap gap-2">
           {interests.map((t) => (
-            <span key={t} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-mist/70">
+            <span
+              key={t}
+              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-mist/70"
+            >
               {t}
             </span>
           ))}
