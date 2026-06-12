@@ -3,6 +3,7 @@ import { useFrame } from '@react-three/fiber';
 import { Html, Line, OrbitControls, Points, PointMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 import data from '../data.js';
+import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion.js';
 
 const byId = Object.fromEntries(data.nodes.map((n) => [n.id, n]));
 const colorOf = (n) => data.clusters[n.cluster].color;
@@ -129,12 +130,13 @@ function Edges({ activeId }) {
 }
 
 function Rig() {
+  const reducedMotion = usePrefersReducedMotion();
   return (
     <OrbitControls
       makeDefault
       enablePan={false}
       enableZoom={false}
-      autoRotate
+      autoRotate={!reducedMotion}
       autoRotateSpeed={0.35}
       enableDamping
       dampingFactor={0.08}

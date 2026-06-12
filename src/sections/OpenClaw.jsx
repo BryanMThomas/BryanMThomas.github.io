@@ -39,7 +39,15 @@ export default function OpenClaw() {
 
         <Reveal delay={120}>
           <div className="relative overflow-hidden rounded-2xl border border-white/10 p-5">
-            <img src="/img/openclaw.png" alt="" className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20" />
+            <img
+              src="/img/openclaw.webp"
+              alt=""
+              width="1024"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+              className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20"
+            />
             <div className="relative grid grid-cols-3 gap-3">
               {grid.map((label) => {
                 const isHub = label === 'Orchestrator';

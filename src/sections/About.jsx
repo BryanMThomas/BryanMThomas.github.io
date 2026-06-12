@@ -16,8 +16,12 @@ export default function About() {
       <div className="mt-8 grid items-start gap-10 md:grid-cols-[200px_1fr]">
         <Reveal>
           <img
-            src="/img/avatar.png"
-            alt="Bryan Thomas"
+            src="/img/avatar.webp"
+            alt="Illustrated portrait of Bryan Thomas"
+            width="800"
+            height="800"
+            loading="lazy"
+            decoding="async"
             className="w-40 rounded-2xl border border-white/10 shadow-2xl md:w-full"
           />
         </Reveal>

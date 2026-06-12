@@ -4,7 +4,7 @@ import Reveal from '../components/Reveal.jsx';
 const ventures = [
   {
     name: 'TripHelm',
-    img: '/img/triphelm.png',
+    img: '/img/triphelm.webp',
     tagline: 'Plan trips minute by minute — from your own AI.',
     body: 'A drag-and-drop itinerary canvas with an MCP server that exposes the whole trip as tool-callable data. Plan manually, or tell Claude/ChatGPT/Perplexity "put my Kyoto trip in TripHelm" and watch it land on the calendar. Its assistant, Hilo, shares a name with my corgi.',
     tags: ['Next.js 15', 'MCP server', 'Prisma · Postgres', 'WorkOS'],
@@ -13,7 +13,7 @@ const ventures = [
   },
   {
     name: 'BryxBids',
-    img: '/img/bryxbids.png',
+    img: '/img/bryxbids.webp',
     tagline: 'Proposal SaaS for contractors.',
     body: 'A multi-tenant SaaS with a drag-and-drop visual proposal editor, pixel-accurate PDF export, and Stripe billing — time-to-value from hours to 30 seconds.',
     tags: ['Next.js', 'Supabase', 'Postgres RLS', 'Stripe'],
@@ -22,7 +22,7 @@ const ventures = [
   },
   {
     name: 'Code & Capital',
-    img: '/img/codecapital.png',
+    img: '/img/codecapital.webp',
     tagline: 'Building in public.',
     body: 'My content endeavor on engineering, AI, and entrepreneurship — sharing how I build production AI systems and ship products solo.',
     tags: ['Content', 'AI', 'Entrepreneurship'],
@@ -48,7 +48,15 @@ export default function Ventures() {
           <Reveal key={v.name} delay={i * 90}>
             <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition hover:border-cyan/30">
               <div className="relative aspect-video overflow-hidden">
-                <img src={v.img} alt={v.name} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                <img
+                  src={v.img}
+                  alt={`${v.name} — ${v.tagline}`}
+                  width="1024"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent" />
               </div>
               <div className="flex flex-1 flex-col p-5">

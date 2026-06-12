@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,4 +23,43 @@ body {
 
 canvas {
   touch-action: none;
+}
+
+::selection {
+  background: rgba(63, 208, 224, 0.35);
+}
+
+/* visible keyboard focus without polluting mouse interactions */
+:focus-visible {
+  outline: 2px solid #3fd0e0;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
+  background: #3fd0e0;
+  color: #0a1622;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: top 0.15s;
+}
+.skip-link:focus-visible {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
