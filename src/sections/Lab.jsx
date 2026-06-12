@@ -1,13 +1,35 @@
 import React from 'react';
 import Reveal from '../components/Reveal.jsx';
+import Aurora from '../components/Aurora.jsx';
+import useInView from '../hooks/useInView.js';
 
 // my current ranking of AI coding agents — shifts constantly, that's the point
 const tools = [
-  { name: 'Claude Code', note: 'Daily driver. This site, my agent fleet, and most of my product code run through it.' },
-  { name: 'Codex', note: 'OpenAI’s agent in the loop — a second opinion and a second pair of hands for parallel work.' },
-  { name: 'Cursor', note: 'Where a lot of my in-editor, tab-complete-heavy work still happens.' },
-  { name: 'Antigravity', note: 'Google’s agent-first IDE — kicking the tires on the Gemini agent workflow.' },
-  { name: 'GitHub Copilot / VS Code', note: 'The original copilot. Still in the rotation for quick inline help.' },
+  {
+    name: 'Claude Code',
+    share: 100,
+    note: 'Daily driver. This site, my agent fleet, and most of my product code run through it.',
+  },
+  {
+    name: 'Codex',
+    share: 78,
+    note: 'OpenAI’s agent in the loop — a second opinion and a second pair of hands for parallel work.',
+  },
+  {
+    name: 'Cursor',
+    share: 62,
+    note: 'Where a lot of my in-editor, tab-complete-heavy work still happens.',
+  },
+  {
+    name: 'Antigravity',
+    share: 44,
+    note: 'Google’s agent-first IDE — kicking the tires on the Gemini agent workflow.',
+  },
+  {
+    name: 'GitHub Copilot / VS Code',
+    share: 30,
+    note: 'The original copilot. Still in the rotation for quick inline help.',
+  },
 ];
 
 // frontier ideas I'm going deeper on right now
@@ -20,12 +42,14 @@ const exploring = [
 ];
 
 export default function Lab() {
+  const [boardRef, boardInView] = useInView(0.3);
   return (
     <section id="lab" className="relative mx-auto max-w-5xl px-6 py-28 md:py-32">
+      <Aurora a="#f6b352" b="#8a7cf0" flip />
       <Reveal>
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan/80">Currently</p>
-        <h2 className="mt-3 text-3xl font-extrabold text-mist md:text-4xl">
-          Staying fluent in the frontier.
+        <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-mist md:text-5xl">
+          Staying fluent <span className="gradient-text">in the frontier</span>.
         </h2>
         <p className="mt-3 max-w-2xl text-mist/60">
           New AI coding agents ship every week. I run all of them in rotation — being fluent in
@@ -42,20 +66,32 @@ export default function Lab() {
             </p>
             <p className="font-mono text-[10px] text-mist/40">re-ranked basically weekly</p>
           </div>
-          <ol className="mt-5 space-y-px">
+          <ol ref={boardRef} className="mt-5 space-y-px">
             {tools.map((t, i) => (
               <li
                 key={t.name}
-                className="flex items-start gap-4 rounded-lg px-2 py-3 transition hover:bg-white/[0.03]"
+                className="relative flex items-start gap-4 overflow-hidden rounded-lg px-2 py-3 transition hover:bg-white/[0.03]"
               >
+                {/* usage bar — fills when the leaderboard scrolls into view */}
                 <span
-                  className={`mt-0.5 w-7 shrink-0 font-mono text-lg font-extrabold tabular-nums ${
+                  aria-hidden="true"
+                  className={`absolute inset-y-0 left-0 origin-left rounded-lg transition-transform duration-1000 ease-out ${
+                    i === 0 ? 'bg-amber/[0.08]' : 'bg-cyan/[0.05]'
+                  }`}
+                  style={{
+                    width: `${t.share}%`,
+                    transform: boardInView ? 'scaleX(1)' : 'scaleX(0)',
+                    transitionDelay: `${i * 120}ms`,
+                  }}
+                />
+                <span
+                  className={`relative mt-0.5 w-7 shrink-0 font-mono text-lg font-extrabold tabular-nums ${
                     i === 0 ? 'text-amber' : 'text-mist/30'
                   }`}
                 >
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <div>
+                <div className="relative">
                   <span className="font-semibold text-mist">{t.name}</span>
                   {i === 0 && (
                     <span className="ml-2 rounded-full bg-amber/15 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide text-amber">

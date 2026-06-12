@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { prefersReducedMotion } from '../hooks/usePrefersReducedMotion.js';
 
 export default function Reveal({ children, className = '', delay = 0, as: Tag = 'div' }) {
   const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(prefersReducedMotion);
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el || prefersReducedMotion()) return;
     const ob = new IntersectionObserver(
       ([e]) => {
         if (e.isIntersecting) {

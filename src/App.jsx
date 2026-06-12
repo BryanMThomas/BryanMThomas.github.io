@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import Lenis from 'lenis';
+import { prefersReducedMotion } from './hooks/usePrefersReducedMotion.js';
+import ScrollProgress from './components/ScrollProgress.jsx';
 import Hero from './sections/Hero.jsx';
 import About from './sections/About.jsx';
 import Experience from './sections/Experience.jsx';
@@ -8,8 +10,16 @@ import OpenClaw from './sections/OpenClaw.jsx';
 import Lab from './sections/Lab.jsx';
 import Contact from './sections/Contact.jsx';
 
+function Divider() {
+  return (
+    <div className="mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-cyan/25 to-transparent" />
+  );
+}
+
 export default function App() {
   useEffect(() => {
+    if (prefersReducedMotion()) return undefined;
+
     const lenis = new Lenis({ smoothWheel: true, lerp: 0.1 });
     let raf;
     const loop = (t) => {
@@ -42,20 +52,25 @@ export default function App() {
 
   return (
     <div className="relative">
+      <a href="#about" className="skip-link">
+        Skip to content
+      </a>
+      <ScrollProgress />
+      <div aria-hidden="true" className="noise" />
       <Hero />
-      <div className="relative z-10 bg-ink">
+      <main className="relative z-10 bg-ink">
         <About />
-        <div className="mx-auto h-px max-w-5xl bg-white/10" />
+        <Divider />
         <Experience />
-        <div className="mx-auto h-px max-w-5xl bg-white/10" />
+        <Divider />
         <Ventures />
-        <div className="mx-auto h-px max-w-5xl bg-white/10" />
+        <Divider />
         <OpenClaw />
-        <div className="mx-auto h-px max-w-5xl bg-white/10" />
+        <Divider />
         <Lab />
-        <div className="mx-auto h-px max-w-5xl bg-white/10" />
+        <Divider />
         <Contact />
-      </div>
+      </main>
     </div>
   );
 }
